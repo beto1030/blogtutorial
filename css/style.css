@@ -1,0 +1,15 @@
+body {
+    #border: solid 1px red;
+}
+span {/* this is the element for all the text */
+    #border: solid 5px blue;
+}
+ul {
+    #list-style: none;   
+}
+li {
+}
+a {
+    text-decoration: none;
+    
+}

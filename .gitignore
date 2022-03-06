@@ -1,0 +1,20 @@
+composer.phar /vendor/
+build
+tests/phpunit.xml
+composer.phar
+vendor
+test.php
+.lintcache
+docs/_build
+package.json
+*.sublime-workspace
+clover.xml
+/coverage
+productionData/project-id.php
+node_modules/
+sanity.json
+yarn.lock
+package-lock.json
+composer.json
+composer.lock
+tsconfig.json

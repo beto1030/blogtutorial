@@ -10,5 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="alert alert-primary" role="alert">
+    master branch 
+</div>
 <?php include_once(__DIR__."/nav.php"); ?>
 

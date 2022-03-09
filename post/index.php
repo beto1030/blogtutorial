@@ -41,7 +41,7 @@ if(isset($_GET['post'])){
 }
 ?>
     <?php include("../templates/top.php"); ?>
-    <div class="container w-75" style="width: 1000px;">
+    <div class="container mb-5 pb-5 w-75" style="width: 1000px;">
         <pre><?php //print_r($arr) ?></pre>
         <h1><?php echo $arr[0]['title']; ?></h1>
         

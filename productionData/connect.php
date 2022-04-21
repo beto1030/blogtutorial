@@ -10,7 +10,7 @@ $client = new SanityClient([
 ]);
 
 $results = $client->fetch(
-  '*[_type == "post"]'
+  '*[_type == "post"] | order(_createdAt desc)'
 );
 //echo "results varible";
 //print_r($results);

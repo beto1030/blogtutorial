@@ -8,7 +8,7 @@ $siteName = "codingwbeto";
 $siteEmail = "support@codingwbeto.com";
 
 $siteURL = ($_SERVER["HTTPS"] == "on")?"https://":"http://";
-$siteURL = $siteURL.$_SERVER["SERVER_NAME"].":8887".dirname($_SERVER["REQUEST_URI"])."/";
+$siteURL = $siteURL.$_SERVER["SERVER_NAME"].":8888".dirname($_SERVER["REQUEST_URI"])."/";
 
 // Database Configuration
 define('DB_HOST', 'localhost');

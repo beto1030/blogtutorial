@@ -4,11 +4,14 @@
     <!--<div class="status"></div>-->
     
     <!-- Subscription form -->
-    <form action="#" id="subsFrm" method="post">
-        <input type="text" id="name" placeholder="Full Name" required="">
-        <input type="email" id="email" placeholder="E-mail" required="">
-        <input type="button" id="subscribeBtn" value="Subscribe Now">
-    </form>
+    <center class="mt-5 pt-5">
+        <form action="./scripts/add_subscriber.php" id="subsFrm" method="post">
+            <input type="text" name="name" id="name" placeholder="Full Name" required="">
+            <input type="email" name="email" id="email" placeholder="E-mail" required="">
+            <!--<input type="button" id="subscribeBtn" value="Subscribe Now">-->
+            <button name="submitttt" type="submit">Subscribe Now</button>
+        </form>
+    </center>
 </footer>
 
 <script>

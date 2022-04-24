@@ -38,3 +38,21 @@ a#card.col-sm-3 {
 .card .card-title {
     padding: 20px 0px;
 }
+nav ul li {
+    position: relative;
+}
+nav ul ul {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    list-style: none;
+}
+nav ul ul a {
+    margin-left: -23px;
+}
+nav ul li ul {
+    display: none;
+}
+nav ul li:hover ul {
+    display: block;
+}

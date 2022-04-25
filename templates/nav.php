@@ -12,10 +12,10 @@
         <li class="nav-item">
             <a class="nav-link" href="#">Articles</a>
             <ul>
-                <li><a href="./articles/html/index.php?articles=html">HTML</a></li>
-                <li><a href="./articles/css/index.php?articles=css">CSS</a></li>
-                <li><a href="./articles/php/index.php?articles=php">PHP</a></li>
-                <li><a href="./articles/mysql/index.php?articles=mysql">MYSQL</a></li>
+                <li><a href="./articles/index.php?articles=html">HTML</a></li>
+                <li><a href="./articles/index.php?articles=css">CSS</a></li>
+                <li><a href="./articles/index.php?articles=php">PHP</a></li>
+                <li><a href="./articles/index.php?articles=mysql">MYSQL</a></li>
             </ul>
         </li>
         <li class="nav-item">

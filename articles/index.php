@@ -1,8 +1,12 @@
     <?php
-    include_once(__DIR__.'/vendor/autoload.php');
-    include_once('./productionData/connect.php');
-    include_once("./templates/top.php"); ?>
+    include_once('../vendor/autoload.php');
+    include_once('../productionData/connect.php');
+    include_once("../templates/top.php"); ?>
 
+<?php if(isset($_GET["articles"])){ 
+        $articles = $_GET["articles"];
+        echo $articles;
+?>
         <div class="container">
                         <div class="container m-5 p-5">
                             <pre>
@@ -10,7 +14,7 @@
                              //for($i = 0; $i<sizeof($results); $i++){
                              //echo "<p>".$results[$i]['categories']["title"]."</p>";
                              //}
-                             print_r($results); 
+                             //print_r($results); 
                              ?>
                             </pre>
                         </div>
@@ -30,5 +34,6 @@
                             <?php } ?>
                         </div>
         </div>
+<?php } ?>
 
 <?php include_once("./templates/bottom.php"); ?>

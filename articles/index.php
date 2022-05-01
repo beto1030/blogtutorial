@@ -10,19 +10,21 @@
        
 ?>
 
-        <div class="container">
+        <div class="container mt-4">
+                        <!--
                         <div class="container m-5 p-5">
                             <pre>
                              <?php 
-                             for($i = 0; $i<sizeof($results); $i++){
-                                 if($results[$i]['categories']['title'] == $articles){
-                                    echo "<p>".$results[$i]['categories']["title"]."</p>";
-                                 }
-                             }
+                             //for($i = 0; $i<sizeof($results); $i++){
+                             //    if($results[$i]['categories']['title'] == $articles){
+                             //       echo "<p>".$results[$i]['categories']["title"]."</p>";
+                             //    }
+                             //}
                              //print_r($results); 
                              ?>
                             </pre>
                         </div>
+                        -->
                         <div class="row">
                             <?php for($i = 0; $i<sizeof($results); $i++){ 
                                      if($results[$i]['categories']['title'] == $articles){?>

@@ -52,6 +52,10 @@ nav ul ul a {
 }
 nav ul li ul {
     display: none;
+    border: solid 1px red;
+}
+nav ul ul li {
+    border: solid 1px red;
 }
 nav ul li:hover ul {
     display: block;

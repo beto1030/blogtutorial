@@ -5,7 +5,7 @@
     
     <!-- Subscription form -->
     <center class="mt-5 pt-5">
-        <form action="./scripts/add_subscriber.php" id="subsFrm" method="post">
+        <form action="./db/add_subscriber.php" id="subsFrm" method="post">
             <input type="text" name="name" id="name" placeholder="Full Name" required="">
             <input type="email" name="email" id="email" placeholder="E-mail" required="">
             <!--<input type="button" id="subscribeBtn" value="Subscribe Now">-->

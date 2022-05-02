@@ -1,7 +1,7 @@
 <?php
 
 include_once('../vendor/autoload.php');
-include_once('../productionData/connect.php');
+include_once('../sanity/connect.php');
 include_once("../templates/top.php"); 
 
 if(isset($_GET['post'])){

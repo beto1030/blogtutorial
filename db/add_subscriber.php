@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['submitttt'])){
-   include_once("../productionData/subscribers_db.php"); 
+   include_once("./subscribers_db.php"); 
    $name = $_POST['name'];  
    $email = $_POST['email'];  
 

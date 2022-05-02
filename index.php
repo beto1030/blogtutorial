@@ -1,6 +1,6 @@
     <?php
     include_once(__DIR__.'/vendor/autoload.php');
-    include_once('./productionData/connect.php');
+    include_once('./sanity/connect.php');
     include_once("./templates/top.php"); 
     ?>
     

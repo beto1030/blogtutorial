@@ -20,7 +20,8 @@
                             <a id="card" style="text-decoration: none;"class="col-sm-3"href="./post/index.php?post=<?php echo $results[$i]['slug']['current'];?>">
                                 <div class="">
                                     <div class="card text-dark">
-                                        <div class="card-header">HTML</div>
+                                    <div class="card-header"><?= $results[$i]['categories']["title"]; ?>
+</div>
                                         <div class="card-body">
                                         <h5 class="card-title"><?= $results[$i]['title'] ?></h5>
                                             <p class="card-text">Card Text</p>

@@ -1,15 +1,62 @@
-body {
+* {
     #border: solid 1px red;
 }
-span {/* this is the element for all the text */
+body {
+    #border: solid 1px red;
+    background-color: lightblue;
+}
+span {
+    /* this is the element for all the text */
     #border: solid 5px blue;
 }
 ul {
-    #list-style: none;   
+    #list-style: none;
 }
-li {
+#card {
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+        0.3s box-shadow,
+        0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+    padding: 14px 80px 18px 36px;
+    cursor: pointer;
 }
-a {
-    text-decoration: none;
-    
+
+#card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+a#card.col-sm-3 {
+    #border: solid 1px blue;
+    padding: 0;
+    margin: 5px 5px;
+}
+.card .card-body {
+    padding: 10px 20px 30px 20px;
+}
+.card .card-title {
+    padding: 20px 0px;
+}
+nav ul li {
+    position: relative;
+}
+nav ul ul {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    list-style: none;
+}
+nav ul ul a {
+    margin-left: -23px;
+}
+nav ul li ul {
+    display: none;
+    border: solid 1px red;
+}
+nav ul ul li {
+    border: solid 1px red;
+}
+nav ul li:hover ul {
+    display: block;
 }

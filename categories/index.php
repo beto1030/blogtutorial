@@ -28,7 +28,7 @@
                         <div class="row">
                             <?php for($i = 0; $i<sizeof($results); $i++){ 
                                      if($results[$i]['categories']['title'] == $articles){?>
-                                         <a id="card" style="text-decoration: none;"class="col-sm-3"href="#<?php //echo $results[$i]['slug']['current'];?>">
+                                         <a id="card" style="text-decoration: none;"class="col-sm-3" href="<?= $upFolderPlaceholder."post/index.php?post=".$results[$i]['slug']['current'];?>">
                                              <div class="">
                                                  <div class="card text-dark">
                                                  <div class="card-header"><?= $results[$i]['categories']["title"]; ?></div>
@@ -47,4 +47,4 @@
         </div>
 <?php } ?>
 
-<?php include_once("./templates/bottom.php"); ?>
+<?php include_once("../templates/bottom.php"); ?>

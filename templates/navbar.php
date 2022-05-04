@@ -4,7 +4,7 @@
                 <div class="dropdown mt-3">
 
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton222" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Articles
+                             <?php echo isset($_GET["articles"])? $_GET["articles"]: "*"; ?>
                         </button>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton222">

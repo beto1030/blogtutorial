@@ -4,14 +4,21 @@
     <!--<div class="status"></div>-->
     
     <!-- Subscription form -->
+    <!--
     <center class="mt-5 pt-5">
         <form action="./db/add_subscriber.php" id="subsFrm" method="post">
             <input type="text" name="name" id="name" placeholder="Full Name" required="">
             <input type="email" name="email" id="email" placeholder="E-mail" required="">
-            <!--<input type="button" id="subscribeBtn" value="Subscribe Now">-->
             <button name="submitttt" type="submit">Subscribe Now</button>
         </form>
     </center>
+    -->
+    <center>
+        <a href="https://discord.gg/RTWp9hQb" target="_blank">
+            <i class="mt-5 fa-brands fa-discord fa-2xl"></i>
+        </a>
+    </center>
+
 </footer>
 <script>
 $(document).ready(function(){

@@ -46,7 +46,10 @@ if(isset($_GET['post'])){
         <pre><?php //print_r($arr) ?></pre>
         <h1><?php echo $arr[0]['title']; ?></h1>
         
-        <img src="https://cdn.sanity.io/images/oongt7y8/production/<?= $imageFile  ?>" class="mt-1 w-100" alt="image here">
+        <?php if($arr[0]['mainImage'] != null){?>
+            <img src="https://cdn.sanity.io/images/oongt7y8/production/<?= $imageFile;  ?>" class="mt-1 w-100" alt="image here">
+        <?php } ?>
+
         <?php 
             //for($i=0; $i<sizeof($arr[0]['body']); $i++){
             for($i=0; $i<sizeof($body); $i++){

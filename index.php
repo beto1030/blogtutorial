@@ -20,11 +20,20 @@
                             <a id="card" style="text-decoration: none;"class="col-sm-3"href="./post/index.php?post=<?php echo $results[$i]['slug']['current'];?>">
                                 <div class="">
                                     <div class="card text-dark">
-                                    <div class="card-header"><?= $results[$i]['categories']["title"]; ?>
-</div>
+                                        <div class="card-header"><?= strtoupper($results[$i]['categories']["title"]); ?></div>
                                         <div class="card-body">
-                                        <h5 class="card-title"><?= $results[$i]['title'] ?></h5>
-                                            <p class="card-text">Card Text</p>
+                                            <h5 class="card-title"><?= $results[$i]['title'] ?></h5>
+                                            <p class="card-text">
+                                                <?php
+                                                $publishedAt_date = new DateTime($results[$i]["publishedAt"]);
+                                                $updatedAt_date = new DateTime($results[$i]["_updatedAt"]);
+                                                if($publishedAt_date < $updatedAt_date){
+                                                    echo "<small>".strtoupper($updatedAt_date->format('M j, Y'))."</small>";
+                                                }else {
+                                                    echo "<small>".strtoupper($publishedAt_date->format('M j, Y'))."</small>";
+                                                }
+                                                ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>    

@@ -32,6 +32,9 @@ a#card.col-sm-3 {
     padding: 0;
     margin: 5px 5px;
 }
+.card {
+    border: none;
+}
 .card .card-body {
     padding: 10px 20px 30px 20px;
 }
@@ -59,4 +62,7 @@ nav ul ul li {
 }
 nav ul li:hover ul {
     display: block;
+}
+.row {
+    margin-left: 17%;
 }

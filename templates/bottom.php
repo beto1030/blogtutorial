@@ -13,11 +13,6 @@
         </form>
     </center>
     -->
-    <center>
-        <a href="https://discord.gg/RTWp9hQb" target="_blank">
-            <i class="mt-5 fa-brands fa-discord fa-2xl"></i>
-        </a>
-    </center>
 
 </footer>
 <script>

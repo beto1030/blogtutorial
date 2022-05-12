@@ -1,4 +1,4 @@
-    <div class="container" style="padding-top: 3.5rem">
+    <div class="container pt-5">
 
         <div class="d-flex dropdown-hover-all">
                 <div class="dropdown mt-3">
@@ -54,6 +54,12 @@
 
                         </div><!-- .dropdown-menu -->
                 </div><!-- .dropdown.mt-3-->
+
+            <div class="w-100 d-flex justify-content-end">
+                <a href="https://discord.gg/RTWp9hQb" class"" target="_blank">
+                    <i class="ms-3 fa-brands fa-discord fa-2xl"></i>
+                </a>
+            </div>
         </div><!-- .d-flex.dropdown-hover-all -->
 
     </div><!-- .container -->

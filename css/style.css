@@ -3,7 +3,7 @@
 }
 body {
     #border: solid 1px red;
-    background-color: #d7ecf7;
+    background-color: lightblue;
 }
 span {
     /* this is the element for all the text */
@@ -19,8 +19,9 @@ ul {
     transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
         0.3s box-shadow,
         0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-    padding: 14px 80px 18px 36px;
+    margin: 10px;
     cursor: pointer;
+    height: 250px;
 }
 
 #card:hover {
@@ -35,8 +36,11 @@ a#card.col-sm-3 {
 .card {
     border: none;
 }
+.card .card-header {
+    padding-left: 20px;
+}
 .card .card-body {
-    padding: 10px 20px 30px 20px;
+    padding: 0px 20px 0px 20px;
 }
 .card .card-title {
     padding: 20px 0px;
@@ -69,7 +73,7 @@ nav ul li:hover ul {
 .ellipsis {
   display: -webkit-box;
   max-width: 100%;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -78,12 +82,16 @@ nav ul li:hover ul {
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
   #background-color: #2196F3;
-  padding: 10px;
+  padding-left: 20%;
 }
 .grid-item {
  #background-color: rgba(255, 255, 255, 0.8);
   #border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 10px;
+  margin: 0px 0px;
   #font-size: 30px;
   #text-align: center;
+}
+i {
+    padding-top: 34px;
+    padding-right: 10px;
 }

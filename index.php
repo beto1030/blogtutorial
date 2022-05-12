@@ -13,12 +13,12 @@ include(__DIR__.'/templates/top.php');
 
                                         <div class="card-header text-uppercase"><?= $results[$i]['categories']["title"] ?></div>
 
-                                        <div class="card-body d-flex flex-column">
+                                        <div class="card-body">
                                             <h5 class="card-title"><?= $results[$i]['title'] ?></h5>
                                             <p class="card-text ellipsis"><?= $results[$i]['summary'] ?></p>
                                         </div>
 
-                                        <div class="card-footer border-0 bg-white pt-0 ms-1 text-uppercase" >
+                                        <div class="card-footer border-0 bg-white pt-0 text-uppercase" >
                                             <p class="card-text text-muted">
                                                 <?php
                                                 $publishedAt_date = new DateTime($results[$i]["publishedAt"]);

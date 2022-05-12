@@ -21,7 +21,6 @@ ul {
         0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
     margin: 10px;
     cursor: pointer;
-    height: 250px;
 }
 
 #card:hover {
@@ -73,7 +72,7 @@ nav ul li:hover ul {
 .ellipsis {
   display: -webkit-box;
   max-width: 100%;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -94,4 +93,7 @@ nav ul li:hover ul {
 i {
     padding-top: 34px;
     padding-right: 10px;
+}
+.card-footer {
+   padding-left: 20px; 
 }

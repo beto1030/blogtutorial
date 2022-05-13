@@ -41,8 +41,7 @@ if(isset($_GET['post'])){
     
 }
 ?>
-    <?php include("../templates/top.php"); ?>
-    <div class="container mb-5 pb-5 w-75" style="width: 1000px;">
+    <div class="container mb-5 pb-5">
         <pre><?php //print_r($arr) ?></pre>
         <h1><?php echo $arr[0]['title']; ?></h1>
         
@@ -59,7 +58,7 @@ if(isset($_GET['post'])){
                 //if body has an image do this:
                 if(strpos($body[$i],"imgFile") !== false){ 
               ?>
-                <img src="https://cdn.sanity.io/images/oongt7y8/production/<?php echo str_replace('-imgFile', '', $body[$i]) ; ?>" style="" class="w-100" alt="image here">
+                <img src="https://cdn.sanity.io/images/oongt7y8/production/<?php echo str_replace('-imgFile', '', $body[$i]) ; ?>" class="w-100 border border-1 border-dark" alt="image here">
             <?php }
                 //if body has a blank line do this:
                 else if($arr[0]['body'][$i]['children'][0]['text'] == ""){

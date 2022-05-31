@@ -52,6 +52,7 @@ export default {
         ]
       }
     },
+
     {
       name: 'categories',
       title: 'Categories',

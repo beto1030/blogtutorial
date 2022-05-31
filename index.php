@@ -33,8 +33,8 @@ include(__DIR__.'/templates/top.php');
                                         </div><!-- .card-footer -->
 
                                  </div><!-- .card -->
-                             </a><!-- #card -->
-                          </div><!-- .grid-item -->
+                             </a><!-- col-sm-3 -->
+                          </div><!-- #card.grid-item -->
                   <?php } ?>
                 </div><!-- .grid-container -->
 </div><!-- .container -->

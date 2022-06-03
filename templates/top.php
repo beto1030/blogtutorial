@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="<?= $upFolderPlaceholder."css/style.css" ?>">
     <link rel="stylesheet" href="<?= $upFolderPlaceholder."css/grid.css" ?>">
     <link rel="stylesheet" href="<?= $upFolderPlaceholder."css/card.css" ?>">
-
 </head>
 <body>
 <!--

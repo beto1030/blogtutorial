@@ -37,23 +37,6 @@ export default {
       },
     },
     {
-      name: 'exampleUsage',
-      title: 'Example usage',
-      type: 'code',
-      options: {
-        theme: 'solarized_dark',
-        language: 'js',
-        languageAlternatives: [
-          {title: 'Javascript', value: 'js'},
-          {title: 'HTML', value: 'html'},
-          {title: 'CSS', value: 'css'},
-          {title: 'SASS', value: 'sass'},
-          {title: 'PHP', value: 'php'},
-        ]
-      }
-    },
-
-    {
       name: 'categories',
       title: 'Categories',
       type: 'array',

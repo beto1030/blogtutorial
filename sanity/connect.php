@@ -27,6 +27,7 @@ $results = $client->fetch(
     //    summary,
     //    title
     //}'
+    
     '*[_type == "post"] | order(_createdAt desc)
     {
         _createdAt,
@@ -52,7 +53,42 @@ $results = $client->fetch(
 //    }
 //}
 echo "<pre>";
-//print_r($results[0]['body']);
+//print_r($results);
+echo "</pre>";
+
+$results_copy = $results;
+array_multisort($results_copy);
+
+echo "<pre>";
+//echo "array_multisort<br>";
+//print_r($results_copy);
+echo "</pre>";
+
+
+function val_sort($array, $key){
+    foreach($array as $k=>$v){
+        $b[] = strtolower($v[$key]);
+    }
+
+    //print_r($b);
+
+    asort($b);
+
+    //echo "<br />";
+    //print_r($b); 
+
+    foreach($b as $k=>$v){
+        $c[] = $array[$k];
+    }
+     
+    return $c;
+}
+
+$sorted = val_sort($results_copy, 'title');
+
+echo "<pre>";
+//echo "sorted array<br>";
+//print_r($sorted);
 echo "</pre>";
 
 //$arr = array();

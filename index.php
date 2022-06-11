@@ -5,6 +5,7 @@ include(__DIR__.'/templates/top.php');
 ?>
 
 <div class="container mt-4"> 
+               <pre><?php //print_r($results);?></pre>
                 <div class="grid-container">
                   <?php for($i = 0; $i<sizeof($results); $i++){ ?>
                           <div id="card" class="grid-item">

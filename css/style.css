@@ -8,4 +8,28 @@ i {
     padding-right: 10px;
 }
 div.container {
+    position: relative;
+}
+
+a.previous, a.next { text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.previous {
+  #background-color: #f1f1f1;
+  color: black;
+  position: absolute;
+  left: 0;
+}
+
+.next {
+  #background-color: #04AA6D;
+  color: black;
+  position: absolute;
+  right: 0;
+}
+
+.round {
+  border-radius: 50%;
 }

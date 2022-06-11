@@ -18,6 +18,8 @@ if(isset($_GET['post'])){
     for($i=0; $i<sizeof($results); $i++){
         array_push($arr,$results[$i]);
     } 
+
+    
     //===============================================================
 
     $mainImg = $arr[0]['mainImage']['asset']['_ref']; 
@@ -39,9 +41,8 @@ if(isset($_GET['post'])){
     }
     
     
-}
 ?>
-    <div class="container mb-5 pb-5">
+    <div class="container px-0 mb-5 pb-5">
         <?php
             //for($i = 0; $i < sizeof($arr[0]['body']); $i++){
             //    echo $i." has";
@@ -56,17 +57,17 @@ if(isset($_GET['post'])){
             //}
             //echo "element 26 has ".sizeof($arr[0]['body'][26]['children']);
         ?>
-        <?= "<pre>" ?>
+        <?php echo "<pre>"; ?>
         <?php //print_r($arr[0]['body']); ?>
-        <?= "</pre>" ?>
+        <?php echo "</pre>"; ?>
         <h1><?php echo $arr[0]['title']; ?></h1>
         
         <?php if($arr[0]['mainImage'] !== null){?>
-            <img src="https://cdn.sanity.io/images/oongt7y8/production/<?= $mainImgFile;  ?>" class="mt-1 w-100" alt="image here">
+            <img src="https://cdn.sanity.io/images/oongt7y8/production/<?= $mainImgFile;  ?>"  class="rounded mx-auto d-block img-fluid" style="margin-left: -30px;" alt="image here">
         <?php } ?>
 
         <?php 
-            print_r($bodyImageArr);
+            //print_r($bodyImageArr);
             for($i=0; $i<sizeof($arr[0]['body']); $i++){
                 //if body has an image do this:
                 //if(strpos($imgFileNamesArray[$i], "imgFile") !== false) 
@@ -74,7 +75,7 @@ if(isset($_GET['post'])){
                     $imgfile = explode("-", $arr[0]['body'][$i]['asset']['_ref']);
                     $imgfile = $imgfile[1]."-".$imgfile[2].".".$imgfile[3]."-imgFile";
               ?>
-                <img src="https://cdn.sanity.io/images/oongt7y8/production/<?php echo str_replace('-imgFile', '', $imgfile); ?>" class="w-100 border border-1 border-dark" alt="image here">
+                <img src="https://cdn.sanity.io/images/oongt7y8/production/<?php echo str_replace('-imgFile', '', $imgfile); ?>" class="rounded mx-auto d-block img-fluid mb-3" alt="image here">
             <?php }
                 //if body has a blank line do this:
                 //if($arr[0]['body'][$i]['children'][0]['text'] == ""){
@@ -86,7 +87,15 @@ if(isset($_GET['post'])){
                     echo "<ul>";
                     while($arr[0]['body'][$i]['listItem'] == true){
                 ?>
-                    <li><?php echo $arr[0]['body'][$i]['children'][0]['text']; ?></li>
+                    <li>
+                        <?php 
+                        if($arr[0]['body'][$i]['markDefs'][0]['_type'] == 'link'){
+                            echo "<a href=".$arr[0]['body'][$i]['markDefs'][0]['href']." target='_blank'>".$arr[0]['body'][$i]['children'][0]['text']."</a>"; 
+                        }else{
+                            echo $arr[0]['body'][$i]['children'][0]['text']; 
+                        }
+                        ?>
+                    </li>
                     
                 <?php 
                     $i++;
@@ -95,16 +104,6 @@ if(isset($_GET['post'])){
                         echo "</ul>";
                 }
                  
-                if($arr[0]['body'][$i]['_type'] == "code"){
-                    $code = '<pre data-file="" data-lang="php">'.$arr[0]['body'][$i]['code']."</pre>";
-   
-                    $highlighter = new Highlighter($code, 'railscasts');
-                    // Configuration
-                    $highlighter->setShowLineNumbers(true);
-                    $highlighter->setShowActionPanel(true);
-
-                    echo $highlighter->parse();
-                }
                 //else its just text do this:
                 if($arr[0]['body'][$i]['children'][0]['text'] && $arr[0]['body'][$i]['listItem'] !== "bullet"){
                     if($arr[0]['body'][$i]['style'] == 'normal'){ 
@@ -114,7 +113,7 @@ if(isset($_GET['post'])){
                                     if($arr[0]['body'][$i]['children'][$j]['marks'][0] == 'strong'){
                                         echo "<b>".$arr[0]['body'][$i]['children'][$j]['text']."</b>";
                                     } else if($arr[0]['body'][$i]['children'][$j]['marks'][0] == 'code'){
-                                        echo "<code>".$arr[0]['body'][$i]['children'][$j]['text']."</code>";
+                                        echo "<pre><code>".$arr[0]['body'][$i]['children'][$j]['text']."</code></pre>";
                                     }
                                     else {
                                         echo $arr[0]['body'][$i]['children'][$j]['text'];
@@ -138,4 +137,42 @@ if(isset($_GET['post'])){
 
         <?php } ?> 
 
-<?php include_once("../templates/bottom.php"); ?>
+            <?php //echo "print_r sorted <br>";
+                  //print_r($sorted);
+
+                  //echo "<pre>";
+                  //echo "sorted <br>";
+                  //for($i = 0; $i < sizeof($sorted); $i++){
+                  //  echo $sorted[$i]["title"]."<br>";
+                  //}
+                  //echo "</pre>";
+            ?>
+        <center>
+            <?php //echo $currentPost. " == ". $sorted[0]['slug']['current']; 
+
+                  for($i = 0; $i < sizeof($sorted); $i++){
+                    if( $currentPost == $sorted[$i]['slug']['current']){
+                        $page = $i;
+                        //echo $page;
+                    }
+                  }
+
+
+                  if( $currentPost == $sorted[0]['slug']['current']){?>
+                    <!--<a href="#" class="previous px-0 left btn disabled">&#8249; Previous Post!!!</a>-->
+            <?php }else{ ?>
+                    <a href="http://localhost:8887/blogtutorial/post/index.php?post=<?php echo $sorted[$page - 1]['slug']['current']; ?>" class="previous px-0 left">&#8249; Previous Post</a>
+                    
+            <?php } 
+            
+             if( $currentPost == $sorted[sizeof($sorted)-1]['slug']['current']){?>
+            <!--<a href="http://localhost:8887/blogtutorial/post/index.php?post=<?php //echo $sorted[$page+1]['slug']['current']; ?>" class="next px-0 right btn disabled"><?php //echo $sorted[$page+1]['slug']['current']; ?> &#8250;</a>-->
+
+<?php }else{?>
+            <a href="http://localhost:8887/blogtutorial/post/index.php?post=<?php echo $sorted[$page+1]['slug']['current']; ?>" class="next px-0 right">Next Post &#8250;</a>
+
+            <?php }?>
+             
+        </center>
+
+<?php include_once("../templates/bottom.php"); }?>

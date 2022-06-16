@@ -11,7 +11,7 @@ schemas/
 yarn.lock
 static/
 
-# files from running sanity init
+# files from running sanity init.
 node_modules/
 .npmignore
 sanity.json

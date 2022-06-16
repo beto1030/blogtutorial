@@ -18,6 +18,7 @@ config/
 package.json
 package-lock.json
 tsconfig.json
+.eslintrc
 
 sanity/project-id.php
 

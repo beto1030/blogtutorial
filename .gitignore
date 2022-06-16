@@ -1,6 +1,7 @@
 .DS_Store
 README.md
 
+# files generated from installing composer
 composer.phar
 composer.phar /vendor/
 composer.json
@@ -10,6 +11,7 @@ schemas/
 yarn.lock
 static/
 
+# files from running sanity init
 node_modules/
 .npmignore
 sanity.json

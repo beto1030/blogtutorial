@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instructions after downloading this git repo</title>
+    <style>
+        code{
+            padding: 1px 2px;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+<h3>Install the following</h3>
+<ul>
+    <li>Composer
+    <ul>
+        <li>I provided a bash script here named install_composer.sh and to run the script run the command <code>sh install_composer.sh</code> </li>
+        <li>Now use the composer command to install php's library for sanity <code>composer require sanity/sanity-php</code></li>
+    </ul>
+    </li>
+    <li>Sanity Client
+    <ul>
+        <li>use node to install <code>npm install -g @sanity/cli</code> if you do not have node installed, <a href="https://www.sanity.io/help/a5f6caba-53c9-4a9f-96ef-1bd1ae8f5c10">here</a> is a link to install it </li>
+        <li>Now use the sanity command to initialize a project <code>sanity init -y --project your-project-id-here --dataset production --template blog --output-path .</code></li>
+    </ul>
+    </li>
+    <li>A local server such as <a href="https://www.mamp.info/en/downloads/">MAMP</a> or <a href="https://www.apachefriends.org/download.html">XAMPP</a></li>
+</ul>
+
+<h3>Things to know</h3>
+<ul>
+    <li>You need to add file project-id.php and just write <code>&lt;?php $project_id = ""; ?&gt;</code> inside of sanity folder</li>
+    <li>You may get this error message. Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". If you cannot get your local server to use the required php version don't worry. Just run this command <code>composer install –ignore-platform-reqs</code> I use MAMP and it currently does not support php verion 8.1.0, it stops at version 8.0.8.</li>
+</ul>
+    
+</body>
+</html>
